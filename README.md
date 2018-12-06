@@ -1,0 +1,1 @@
+# nuxt-hapi-scaffold
