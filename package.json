@@ -1,7 +1,7 @@
 {
-  "name": "lauramilazzo.com",
+  "name": "Nuxt hapi scaffold",
   "version": "1.0.0",
-  "description": "Laura Milazzo Website",
+  "description": "Nuxt & Hapi scaffold",
   "main": "index.js",
   "author": "Pere Monfort",
   "license": "MIT",
