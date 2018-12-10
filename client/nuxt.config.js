@@ -73,7 +73,7 @@ module.exports = {
   },
 
   styleResources: {
-    scss: ['~assets/sass/index.scss']
+    scss: [path.resolve(__dirname, './assets/sass/index.scss')]
   },
   /*
   ** Build configuration
