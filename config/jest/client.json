@@ -1,0 +1,15 @@
+{
+  "rootDir": "../..",
+  "testEnvironment": "jsdom",
+  "roots": ["./client"],
+  "clearMocks": true,
+  "collectCoverageFrom": [
+    "client/scripts/src/**/*.js",
+    "!client/scripts/src/**/__tests__/*",
+    "!client/scripts/src/*",
+    "!client/scripts/src/providers/**",
+    "!client/scripts/src/libs/PageLoader.js"
+  ],
+  "coverageDirectory": "./build/logs/jscoverage/client",
+  "testRegex": "/.*\\.spec\\.js$"
+}

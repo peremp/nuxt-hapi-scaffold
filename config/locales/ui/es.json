@@ -1,0 +1,11 @@
+{
+  "pages": {
+    "home": {
+      "title": "Nuxt scaffold (es)"
+    }
+  },
+  "nav": {
+    "about": "Sobre el site",
+    "home": "Página principal"
+  }
+}

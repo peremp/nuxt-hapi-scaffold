@@ -1,0 +1,13 @@
+{
+  "rootDir": "../..",
+  "testEnvironment": "node",
+  "roots": ["./server"],
+  "collectCoverageFrom": [
+    "server/**/*.js",
+    "!server/**/__tests__/*",
+    "!server/*",
+    "!server/providers/**"
+  ],
+  "coverageDirectory": "./build/logs/jscoverage/server",
+  "testRegex": "/.*\\.spec\\.js$"
+}
