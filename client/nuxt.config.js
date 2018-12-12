@@ -12,6 +12,9 @@ module.exports = {
   mode: 'universal',
   rootDir: PATHS.root,
   srcDir: PATHS.client,
+  parallel: true,
+  sourcemap: false,
+  cache: true,
   /*
   ** Headers of the page
   */
