@@ -8,12 +8,8 @@
 
 <script>
 import { mapState } from 'vuex';
-import CustomIcon from '../../components/CustomIcon/index.vue';
 
 export default {
-  components: {
-    CustomIcon
-  },
   layout({ store }) {
     return store.state.deviceType;
   },

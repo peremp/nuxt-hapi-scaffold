@@ -22,7 +22,6 @@
 <script>
 
 export default {
-  name: 'CustomIcon',
   props: {
     icon: {
       type: String,
