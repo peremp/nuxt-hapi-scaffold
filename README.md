@@ -3,7 +3,11 @@
 [![Issues](https://img.shields.io/github/issues/peremp/nuxt-hapi-scaffold.svg)](https://github.com/peremp/nuxt-hapi-scaffold/issues)
 [![Stars](https://img.shields.io/github/stars/peremp/nuxt-hapi-scaffold.svg)](https://github.com/peremp/nuxt-hapi-scaffold/stargazers)
 
-A basic scaffold (with examples) for a multi-language and multi-platform (mobile/desktop) site/app with Nuxt + Hapi.
+A basic nuxt+hapi scaffold with examples for:
+- Multi-language
+- Multi-platform (mobile/desktop)
+- Custom routing
+- Server UT
 
 ## Installation
 ```
