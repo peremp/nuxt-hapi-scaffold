@@ -13,7 +13,7 @@ export default {
 
     server.route({
       method: 'GET',
-      path: '/data/about',
+      path: '/api/about',
       async handler(request, h) {
         const { locale } = request.query;
         const data = await model.get({ locale });

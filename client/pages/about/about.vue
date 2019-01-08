@@ -25,8 +25,8 @@ export default {
     deviceType: 'deviceType'
   }),
   async asyncData({ app, store }) {
-    const { baseDataApiUrl, locale } = store.state;
-    const data = await app.$axios.$get(`${baseDataApiUrl}/about?locale=${locale}`);
+    const { locale } = store.state;
+    const data = await app.$axios.$get(`/api/about?locale=${locale}`);
 
     return { data };
   },

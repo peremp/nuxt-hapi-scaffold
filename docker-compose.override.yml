@@ -1,0 +1,21 @@
+version: "3.6"
+
+volumes:
+  node_modules:
+  yarn_cache:
+
+services:
+  server:
+    command: yarn dev
+    volumes:
+      - .:/usr/src/app
+      - node_modules:/usr/src/app/node_modules
+      - yarn_cache:/usr/local/share/.cache/yarn
+    ports:
+      - 3000:3000
+    environment:
+      # Node specifics
+      NODE_ENV: "development"
+      NODE_NO_WARNINGS: "0"
+      # App specifics
+      API_URL_BROWSER: 'http://localhost:3000'

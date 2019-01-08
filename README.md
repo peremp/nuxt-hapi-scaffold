@@ -10,21 +10,23 @@ A basic nuxt+hapi scaffold with examples for:
 - Server UT
 
 ## Installation
+#### With Docker
 ```
 $ git clone git@github.com:peremp/nuxt-hapi-scaffold.git
 $ cd nuxt-hapi-scaffold
-$ yarn
+$ docker-compose up
 ```
 
-## Usage
-
-### Development
+#### Local
 ```
-# development mode with hot reloading
+$ git clone git@github.com:peremp/nuxt-hapi-scaffold.git
+$ cd nuxt-hapi-scaffold
+$ yarn install
 $ yarn run dev
 ```
 
-### Testing
+## Commands
+#### Unit testing
 ```
 # Client code tests
 $ yarn run test:client
@@ -39,7 +41,7 @@ $ yarn run test:server
 $ yarn run tdd:server
 ```
 
-### Production
+#### Nuxt
 ```
 # Build your application with webpack and minify the JS & CSS.
 $ yarn run build

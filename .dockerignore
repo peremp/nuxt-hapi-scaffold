@@ -1,0 +1,14 @@
+# Application
+.nuxt
+build
+docker-compose.override.yml
+docker-compose.yml
+
+# Node
+node_modules/*
+yarn-error.log
+
+# Git
+.git
+.gitattributes
+.gitignore

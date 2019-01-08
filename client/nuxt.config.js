@@ -30,8 +30,7 @@ module.exports = {
     ]
   },
   env: {
-    NODE_ENV: process.env.NODE_ENV || 'development',
-    BASE_DATA_API_URL: 'http://localhost:3000/data'
+    NODE_ENV: process.env.NODE_ENV || 'development'
   },
   transition: {
     name: 'layout',
@@ -72,7 +71,9 @@ module.exports = {
   ],
 
   axios: {
-    // proxyHeaders: false
+    proxy: true,
+    browserBaseURL: process.env.API_URL_BROWSER || 'http://localhost:3000',
+    debug: process.env.NODE_ENV === 'development'
   },
 
   styleResources: {
