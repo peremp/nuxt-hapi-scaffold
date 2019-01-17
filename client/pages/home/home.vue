@@ -13,12 +13,7 @@ export default {
   layout({ store }) {
     return store.state.deviceType;
   },
-  computed: {
-    ...mapState([
-      'locale',
-      'deviceType'
-    ])
-  },
+  computed: mapState(['deviceType']),
   head() {
     return {
       bodyAttrs: {

@@ -6,12 +6,10 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
   props: {
-    locale: {
-      type: String,
-      default: ''
-    },
     data: {
       type: Object,
       default() {
@@ -21,6 +19,7 @@ export default {
         };
       }
     }
-  }
+  },
+  computed: mapState(['locale'])
 };
 </script>

@@ -3,7 +3,6 @@
     <component
       :is="component"
       :data="data"
-      :locale="locale"
     />
   </section>
 </template>
@@ -19,11 +18,7 @@ export default {
     desktop: () => import('./about_desktop'),
     mobile: () => import('./about_mobile')
   },
-  computed: mapState({
-    locale: 'locale',
-    apiUrl: 'DATA_BASE_API_URL',
-    deviceType: 'deviceType'
-  }),
+  computed: mapState(['locale']),
   async asyncData({ app, store }) {
     const { locale } = store.state;
     const data = await app.$axios.$get(`/api/about?locale=${locale}`);
