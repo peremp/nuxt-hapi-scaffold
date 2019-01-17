@@ -1,5 +1,5 @@
 const path = require('path');
-const routes = require('./pages');
+const routes = require('../client/pages');
 
 const PATHS = {
   root: path.resolve(__dirname, '../'),
@@ -77,7 +77,7 @@ module.exports = {
   },
 
   styleResources: {
-    scss: [path.resolve(__dirname, './assets/sass/index.scss')]
+    scss: [path.resolve(__dirname, '../client/assets/sass/index.scss')]
   },
   /*
   ** Build configuration

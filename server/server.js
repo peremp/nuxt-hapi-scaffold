@@ -2,7 +2,7 @@ import consola from 'consola';
 import Hapi from 'hapi';
 
 import HapiNuxt from 'hapi-nuxt';
-import HapiNuxtConfig from '../client/nuxt.config';
+import HapiNuxtConfig from '../config/nuxt';
 
 // Plugins
 // Engines
