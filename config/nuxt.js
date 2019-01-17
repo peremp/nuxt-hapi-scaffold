@@ -1,5 +1,5 @@
 const path = require('path');
-const routes = require('../client/pages');
+const routes = require('../client/pages/routes');
 
 const PATHS = {
   root: path.resolve(__dirname, '../'),
