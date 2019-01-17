@@ -16,7 +16,7 @@ const PLATFORM_BY_OS = {
 };
 
 export default function (context) {
-  if (context.store.state.userAgent) return;
+  if (context.store.state.deviceType) return;
 
   const userAgent = process.server
     ? context.req.headers['user-agent']
