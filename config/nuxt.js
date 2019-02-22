@@ -60,6 +60,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '~/assets/sass/index.scss'
   ],
 
   /*
@@ -77,7 +78,9 @@ module.exports = {
   },
 
   styleResources: {
-    scss: [path.resolve(__dirname, '../client/assets/sass/index.scss')]
+    scss: [
+      '~/assets/sass/config/index.scss'
+    ]
   },
   /*
   ** Build configuration
