@@ -1,22 +1,9 @@
 import memoize from 'memoizejs';
-import AboutRepository from '../repositories/AboutRepository';
+import fetch from 'isomorphic-unfetch';
+import MoviesRepository from '../repositories/MoviesRepository';
 
-const fakeApiClient = {
-  get(locale) {
-    return locale === 'en'
-      ? {
-        title: 'Fake Title',
-        description: 'Fake API description'
-      }
-      : {
-        title: 'Título fake',
-        description: 'Descripción fake de la API'
-      };
-  }
-};
-
-export const aboutRepositoryFactory = memoize(() => new AboutRepository({
-  apiClient: fakeApiClient
+export const moviesRepositoryFactory = memoize(() => new MoviesRepository({
+  apiClient: fetch
 }));
 
 export default {};

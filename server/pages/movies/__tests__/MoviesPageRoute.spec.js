@@ -1,23 +1,23 @@
 import hapi from 'hapi';
-import AboutPageRoute from '../AboutPageRoute';
+import MoviesPageRoute from '../MoviesPageRoute';
 
 async function createServerWithModel(options = {}) {
   const model = { get: jest.fn() };
   const server = new hapi.Server();
 
   await server.register({
-    plugin: AboutPageRoute,
+    plugin: MoviesPageRoute,
     options: { model, ...options }
   });
 
   return { model, server };
 }
 
-describe('AboutPageRoute', () => {
+describe('MoviesPageRoute', () => {
   it('should be a Hapi plugin', () => {
-    expect(AboutPageRoute).toBeInstanceOf(Object);
-    expect(AboutPageRoute.register).toBeInstanceOf(Function);
-    expect(AboutPageRoute.name).toBe('About');
+    expect(MoviesPageRoute).toBeInstanceOf(Object);
+    expect(MoviesPageRoute.register).toBeInstanceOf(Function);
+    expect(MoviesPageRoute.name).toBe('Movies');
   });
 
   describe('#handler(request, reply)', () => {
@@ -27,7 +27,7 @@ describe('AboutPageRoute', () => {
 
         await server.inject({
           method: 'GET',
-          url: '/api/about?locale=es'
+          url: '/api/movies?locale=es'
         });
 
         expect(model.get).toHaveBeenCalledWith({ locale: 'es' });
@@ -40,7 +40,7 @@ describe('AboutPageRoute', () => {
 
         const response = await server.inject({
           method: 'GET',
-          url: '/api/about?locale=es'
+          url: '/api/movies?locale=es'
         });
 
         expect(response.statusCode).toBe(200);

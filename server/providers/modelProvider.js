@@ -1,10 +1,10 @@
 import memoize from 'memoizejs';
-import AboutPageModel from '../pages/about/AboutPageModel';
+import MoviesPageModel from '../pages/movies/MoviesPageModel';
 
-import { aboutRepositoryFactory } from './repositoryProvider';
+import { moviesRepositoryFactory } from './repositoryProvider';
 
-export const aboutPageModelFactory = memoize(() => new AboutPageModel({
-  aboutRepository: aboutRepositoryFactory()
+export const moviesPageModelFactory = memoize(() => new MoviesPageModel({
+  moviesRepository: moviesRepositoryFactory()
 }));
 
 export default {};

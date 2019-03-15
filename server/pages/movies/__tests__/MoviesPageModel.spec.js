@@ -1,34 +1,34 @@
-import AboutPageModel from '../AboutPageModel';
+import MoviesPageModel from '../MoviesPageModel';
 
 function createInstance({
   getResponse = {}
 } = {}) {
-  const aboutRepository = {
+  const moviesRepository = {
     get: jest.fn(() => getResponse)
   };
 
-  const instance = new AboutPageModel({
-    aboutRepository
+  const instance = new MoviesPageModel({
+    moviesRepository
   });
 
   return {
-    aboutRepository,
+    moviesRepository,
     instance
   };
 }
 
-describe('AboutPageModel', () => {
+describe('MoviesPageModel', () => {
   it('should be a class with the proper API: get()', () => {
-    expect(AboutPageModel).toBeInstanceOf(Function);
-    expect(AboutPageModel.prototype.get).toBeInstanceOf(Function);
+    expect(MoviesPageModel).toBeInstanceOf(Function);
+    expect(MoviesPageModel.prototype.get).toBeInstanceOf(Function);
   });
 
   it('should call the repo with the locale as a param', async () => {
     const locale = 'en';
-    const { instance, aboutRepository } = createInstance();
+    const { instance, moviesRepository } = createInstance();
     await instance.get({ locale: 'en' });
 
-    expect(aboutRepository.get).toHaveBeenCalledWith({ locale });
+    expect(moviesRepository.get).toHaveBeenCalledWith({ locale });
   });
 
   it('should return the data coming from the repo', async () => {

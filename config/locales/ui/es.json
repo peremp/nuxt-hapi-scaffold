@@ -1,11 +1,16 @@
 {
   "pages": {
     "home": {
-      "title": "Nuxt scaffold (es)"
+      "title": "Nuxt scaffold (es)",
+      "description": "Ejemplo de página responsive (sin componentes dinámicos)"
+    },
+    "movies": {
+      "title": "Películas",
+      "description": "Ejemplo de asyncData y componentes dinámicos."
     }
   },
   "nav": {
-    "about": "Sobre el site",
+    "movie": "Películas",
     "home": "Página principal"
   }
 }

@@ -6,9 +6,9 @@ import HapiNuxtConfig from '../config/nuxt';
 
 // Plugins
 // Engines
-import AboutPageRoute from './pages/about/AboutPageRoute';
+import MoviesPageRoute from './pages/movies/MoviesPageRoute';
 // Controllers
-import { aboutPageModelFactory } from './providers/modelProvider';
+import { moviesPageModelFactory } from './providers/modelProvider';
 
 const plugins = [
   {
@@ -16,9 +16,9 @@ const plugins = [
     options: HapiNuxtConfig
   },
   {
-    plugin: AboutPageRoute,
+    plugin: MoviesPageRoute,
     options: {
-      model: aboutPageModelFactory()
+      model: moviesPageModelFactory()
     }
   }
 ];

@@ -16,7 +16,4 @@ export default {
 </script>
 
 <style lang="scss">
-.content {
-  padding: 2rem;
-}
 </style>

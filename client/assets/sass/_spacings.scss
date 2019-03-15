@@ -1,0 +1,68 @@
+$sizes: (
+  xxs: $spacing-3,
+  xs: $spacing-4,
+  s: $spacing-5,
+  m: $spacing-6,
+  l: $spacing-7,
+  xl: $spacing-8,
+  n: 0
+);
+
+$positions: (
+  pt: (
+    padding-top
+  ),
+  pb: (
+    padding-bottom
+  ),
+  pr: (
+    padding-right
+  ),
+  pl: (
+    padding-left
+  ),
+  ph: (
+    padding-left,
+    padding-right
+  ),
+  pv: (
+    padding-top,
+    padding-bottom
+  ),
+  pa: (
+    padding
+  ),
+  mt: (
+    margin-top
+  ),
+  mb: (
+    margin-bottom
+  ),
+  mr: (
+    margin-right
+  ),
+  ml: (
+    margin-left
+  ),
+  mh: (
+    margin-left,
+    margin-right
+  ),
+  mv: (
+    margin-top,
+    margin-bottom
+  ),
+  ma: (
+    margin
+  )
+);
+
+@each $position, $position-values in $positions {
+  @each $size, $size-value in $sizes {
+    .#{$position}-#{$size} {
+      @each $attributes in $position-values {
+        #{$attributes}: $size-value !important;
+      }
+    }
+  }
+}

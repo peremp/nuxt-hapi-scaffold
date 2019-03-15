@@ -2,18 +2,18 @@
  * @type {Object}
  */
 export default {
-  name: 'About',
+  name: 'Movies',
   /**
    * @param {hapi.Server} server
    * @param {Object} options
-   * @param  {AboutPageModel} options.model
+   * @param  {MoviesPageModel} options.model
    */
   register(server, options) {
     const { model } = options;
 
     server.route({
       method: 'GET',
-      path: '/api/about',
+      path: '/api/movies',
       async handler(request, h) {
         const { locale } = request.query;
         const data = await model.get({ locale });
@@ -22,9 +22,9 @@ export default {
       },
       config: {
         app: {
-          pageId: 'About'
+          pageId: 'Movies'
         },
-        description: 'About page'
+        description: 'Movies page'
       }
     });
   }

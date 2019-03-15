@@ -5,8 +5,8 @@ module.exports = [
     component: '~/pages/home/home.vue'
   },
   {
-    name: 'about',
-    path: '/about',
-    component: '~/pages/about/about.vue'
+    name: 'movies',
+    path: '/movies',
+    component: '~/pages/movies/movies.vue'
   }
 ];

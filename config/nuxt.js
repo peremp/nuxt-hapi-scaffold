@@ -60,7 +60,8 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '~/assets/sass/index.scss'
+    '~/assets/sass/index.scss',
+    'flexboxgrid'
   ],
 
   /*

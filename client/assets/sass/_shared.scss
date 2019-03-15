@@ -14,7 +14,7 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
   font-weight: normal;
   margin: 0;
   padding: 0;
@@ -22,4 +22,15 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: $font-size-XL;
+}
+
+.wrap {
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.box {
+  padding: $spacing-4;
+  background-color: #e8e8e8;
 }
