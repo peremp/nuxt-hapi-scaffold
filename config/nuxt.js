@@ -99,6 +99,10 @@ module.exports = {
           exclude: /(node_modules)/
         });
       }
+
+      // Project folders.
+      config.resolve.alias['~/config'] = `${PATHS.root}/client/config`;
+      config.resolve.alias['~/mixins'] = `${PATHS.root}/client/mixins`;
     },
     splitChunks: {
       layouts: true

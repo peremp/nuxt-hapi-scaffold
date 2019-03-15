@@ -1,3 +1,5 @@
+const resolve = require('path').resolve;
+
 module.exports = {
   parserOptions: {
     parser: 'babel-eslint'
@@ -17,5 +19,20 @@ module.exports = {
   },
   env: {
     "jest/globals": true
+  },
+  settings: {
+    'import/resolver': {
+      webpack: {
+        config: {
+          resolve: {
+            alias: {
+              '~/components': resolve(__dirname, 'client/components'),
+              '~/config': resolve(__dirname, 'client/config'),
+              '~/mixins': resolve(__dirname, 'client/mixins'),
+            },
+          },
+        },
+      },
+    },
   }
 }
