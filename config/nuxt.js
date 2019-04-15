@@ -1,12 +1,13 @@
 const path = require('path');
 const routes = require('../client/pages/routes');
+const pkg = require('../package');
 
 const PATHS = {
-  root: path.resolve(__dirname, '../'),
+  root: path.resolve(__dirname, '../client'),
   client: path.resolve(__dirname, '../client')
 };
 
-const pkg = require('../package');
+const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
   mode: 'universal',
@@ -75,7 +76,7 @@ module.exports = {
   axios: {
     proxy: true,
     browserBaseURL: process.env.API_URL_BROWSER || 'http://localhost:3000',
-    debug: process.env.NODE_ENV === 'development'
+    debug: isDev
   },
 
   styleResources: {
@@ -87,21 +88,11 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    hardSource: true,
+    hardSource: isDev,
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        });
-      }
-
+    extend(config) {
       // Project folders.
       config.resolve.alias['~/config'] = `${PATHS.root}/client/config`;
       config.resolve.alias['~/mixins'] = `${PATHS.root}/client/mixins`;

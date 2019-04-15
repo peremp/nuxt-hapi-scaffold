@@ -1,6 +1,7 @@
 import consola from 'consola';
 import Hapi from 'hapi';
 import path from 'path';
+import Nes from 'nes';
 
 import HapiNuxt from 'hapi-nuxt';
 
@@ -10,11 +11,13 @@ import MoviesPageRoute from './pages/movies/MoviesPageRoute';
 // Controllers
 import { moviesPageModelFactory } from './providers/modelProvider';
 
+const isDev = process.env.NODE_ENV === 'development';
+
 const plugins = [
   {
     plugin: HapiNuxt,
     options: {
-      dev: process.env.NODE_ENV === 'development',
+      dev: isDev,
       nuxtConfig: path.resolve(__dirname, '../config/nuxt.js'),
       rootDir: path.resolve(__dirname, '../client')
     }
@@ -26,6 +29,12 @@ const plugins = [
     }
   }
 ];
+
+if (isDev) {
+  plugins.push({
+    plugin: Nes
+  });
+}
 
 const server = new Hapi.Server({
   host: process.env.HOST || '127.0.0.1',

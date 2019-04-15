@@ -6614,6 +6614,21 @@ neo-async@^2.5.0, neo-async@^2.6.0:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.0.tgz#b9d15e4d71c6762908654b5183ed38b753340835"
   integrity sha512-MFh0d/Wa7vkKO3Y3LlacqAEeHK0mckVqzDieUKTT+KGxi+zIpeVsFxymkIiRpbpDziHc290Xr9A1O4Om7otoRA==
 
+nes@^10.0.2:
+  version "10.0.2"
+  resolved "https://registry.yarnpkg.com/nes/-/nes-10.0.2.tgz#a4a26b066bed83eebdb38ddbd56992e96ad1b1b1"
+  integrity sha512-w99XX03hIcbE1ikJxj85EQnilJTRu8YTBpQuAwKV/IMWa4MWSjK2dVe0Z8ZA2YaVlfl7oYj6bcgZVYwml3Nl4A==
+  dependencies:
+    boom "7.x.x"
+    bounce "1.x.x"
+    call "5.x.x"
+    cryptiles "4.x.x"
+    hoek "6.x.x"
+    iron "5.x.x"
+    joi "14.x.x"
+    teamwork "3.x.x"
+    ws "6.x.x"
+
 nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
@@ -10412,17 +10427,17 @@ write@1.0.3:
   dependencies:
     mkdirp "^0.5.1"
 
+ws@6.x.x, ws@^6.0.0, ws@^6.2.0:
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-6.2.1.tgz#442fdf0a47ed64f59b6a5d8ff130f4748ed524fb"
+  integrity sha512-GIyAXC2cB7LjvpgMt9EKS2ldqr0MTrORaleiOno6TweZ6r3TKtoFQWay/2PceJ3RuBasOHzXNn5Lrw1X0bEjqA==
+  dependencies:
+    async-limiter "~1.0.0"
+
 ws@^5.2.0:
   version "5.2.2"
   resolved "https://registry.yarnpkg.com/ws/-/ws-5.2.2.tgz#dffef14866b8e8dc9133582514d1befaf96e980f"
   integrity sha512-jaHFD6PFv6UgoIVda6qZllptQsMlDEJkTQcybzzXDYM1XO9Y8em691FGMPmM46WGyLU4z9KMgQN+qrux/nhlHA==
-  dependencies:
-    async-limiter "~1.0.0"
-
-ws@^6.0.0, ws@^6.2.0:
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-6.2.1.tgz#442fdf0a47ed64f59b6a5d8ff130f4748ed524fb"
-  integrity sha512-GIyAXC2cB7LjvpgMt9EKS2ldqr0MTrORaleiOno6TweZ6r3TKtoFQWay/2PceJ3RuBasOHzXNn5Lrw1X0bEjqA==
   dependencies:
     async-limiter "~1.0.0"
 
