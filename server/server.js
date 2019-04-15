@@ -1,8 +1,8 @@
 import consola from 'consola';
 import Hapi from 'hapi';
+import path from 'path';
 
 import HapiNuxt from 'hapi-nuxt';
-import HapiNuxtConfig from '../config/nuxt';
 
 // Plugins
 // Engines
@@ -13,7 +13,11 @@ import { moviesPageModelFactory } from './providers/modelProvider';
 const plugins = [
   {
     plugin: HapiNuxt,
-    options: HapiNuxtConfig
+    options: {
+      dev: process.env.NODE_ENV === 'development',
+      nuxtConfig: path.resolve(__dirname, '../config/nuxt.js'),
+      rootDir: path.resolve(__dirname, '../client')
+    }
   },
   {
     plugin: MoviesPageRoute,

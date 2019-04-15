@@ -15,8 +15,8 @@ export default {
     return store.state.deviceType;
   },
   components: {
-    desktop: () => import('./movies-desktop'),
-    mobile: () => import('./movies-mobile')
+    desktop: () => import('./movies-desktop.vue'),
+    mobile: () => import('./movies-mobile.vue')
   },
   computed: mapState(['locale']),
   async asyncData({ error, app, store }) {
