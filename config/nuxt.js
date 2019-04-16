@@ -3,7 +3,7 @@ const routes = require('../client/pages/routes');
 const pkg = require('../package');
 
 const PATHS = {
-  root: path.resolve(__dirname, '../client'),
+  root: path.resolve(__dirname, '../'),
   client: path.resolve(__dirname, '../client')
 };
 
@@ -11,7 +11,7 @@ const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
   mode: 'universal',
-  rootDir: PATHS.root,
+  rootDir: PATHS.client,
   srcDir: PATHS.client,
   parallel: true,
   sourcemap: false,
