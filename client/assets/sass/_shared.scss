@@ -1,36 +1,50 @@
 body, html {
-  font-size: 62.5%;
+  font-size: 100%;
+  height: 100%;
   margin: 0;
+  padding: 0;
 }
 
 body {
   color: #000;
   font-family: "Lato", sans-serif;
-  font-size: $font-size-M;
+  font-size: $font-size-XS;
 }
 
+* {
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+}
+
+
 a {
-  color: $color-black;
+  color: currentColor;
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-  font-weight: normal;
+p {
   margin: 0;
   padding: 0;
 }
 
-h1 {
-  font-size: $font-size-XL;
+em {
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-bold;
+  margin: 0;
+  padding: 0;
+}
+
+ul,li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .wrap {
   box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.box {
-  padding: $spacing-4;
-  background-color: #e8e8e8;
 }

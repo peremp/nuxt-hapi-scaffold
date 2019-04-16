@@ -8,12 +8,6 @@
         >
           {{ $t("ui.nav.home") }}
         </nuxt-link>
-        <nuxt-link
-          to="/movies"
-          class="main-menu__link pv-m ph-s"
-        >
-          {{ $t("ui.nav.movies") }}
-        </nuxt-link>
       </div>
     </div>
   </div>

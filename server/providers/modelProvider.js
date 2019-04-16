@@ -1,5 +1,5 @@
 import memoize from 'memoizejs';
-import MoviesPageModel from '../pages/movies/MoviesPageModel';
+import MoviesPageModel from '../api/movies/MoviesPageModel';
 
 import { moviesRepositoryFactory } from './repositoryProvider';
 

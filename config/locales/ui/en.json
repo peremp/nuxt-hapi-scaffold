@@ -1,16 +1,10 @@
 {
   "pages": {
     "home": {
-      "title": "Homepage (en)",
-      "description": "Responsive layout example (no dynamic components)"
-    },
-    "movies": {
-      "title": "Movies",
-      "description": "asyncData and dynamic components example"
+      "title": "Homepage title"
     }
   },
   "nav": {
-    "movies": "Movies",
     "home": "Homepage"
   }
 }

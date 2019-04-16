@@ -1,26 +1,9 @@
 <template>
   <section class="wrap container-fluid pv-m">
-    <div class="row mb-m">
-      <div class="col-xs-12">
-        <p class="box">
-          {{ $t('ui.pages.home.description') }}
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-8 pb-xs">
-        <div class="box">
-          <h2>
-            {{ $t('ui.pages.home.title') }} ({{ deviceType }})
-          </h2>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-4 pb-xs">
-        <div class="box">
-          Col 2
-        </div>
-      </div>
-    </div>
+    <component
+      :is="component"
+      :shows="shows"
+    />
   </section>
 </template>
 
@@ -31,13 +14,29 @@ export default {
   layout({ store }) {
     return store.state.deviceType;
   },
-  computed: mapState(['deviceType']),
-  head() {
-    return {
-      bodyAttrs: {
-        class: 'home'
-      }
-    };
+  components: {
+    desktop: () => import('./home-desktop.vue'),
+    mobile: () => import('./home-mobile.vue')
+  },
+  computed: mapState(['locale']),
+  async asyncData({ error, app, store }) {
+    const { locale } = store.state;
+    let shows;
+
+    try {
+      ({ shows } = await app.$axios.$get(`/api/movies?locale=${locale}`));
+    } catch (e) {
+      const {
+        status: statusCode,
+        statusText: message
+      } = e.response;
+      return error({ statusCode, message });
+    }
+
+    return { shows };
+  },
+  beforeCreate() {
+    this.component = this.$store.state.deviceType;
   }
 };
 </script>

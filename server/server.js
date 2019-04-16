@@ -7,7 +7,7 @@ import HapiNuxt from 'hapi-nuxt';
 
 // Plugins
 // Engines
-import MoviesPageRoute from './pages/movies/MoviesPageRoute';
+import MoviesPageRoute from './api/movies/MoviesPageRoute';
 // Controllers
 import { moviesPageModelFactory } from './providers/modelProvider';
 
