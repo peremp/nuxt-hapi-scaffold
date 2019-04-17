@@ -11,7 +11,7 @@ const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
   mode: 'universal',
-  rootDir: PATHS.client,
+  rootDir: PATHS.root,
   srcDir: PATHS.client,
   parallel: true,
   sourcemap: false,

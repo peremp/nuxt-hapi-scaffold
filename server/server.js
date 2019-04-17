@@ -18,8 +18,7 @@ const plugins = [
     plugin: HapiNuxt,
     options: {
       dev: isDev,
-      nuxtConfig: path.resolve(__dirname, '../config/nuxt.js'),
-      rootDir: path.resolve(__dirname, '../client')
+      nuxtConfig: path.resolve(__dirname, '../config/nuxt.js')
     }
   },
   {
