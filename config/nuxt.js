@@ -33,7 +33,7 @@ module.exports = {
   env: {
     NODE_ENV: process.env.NODE_ENV || 'development'
   },
-  transition: {
+  pageTransition: {
     name: 'layout',
     mode: 'out-in'
   },
