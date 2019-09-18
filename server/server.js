@@ -1,9 +1,9 @@
 import consola from 'consola';
-import Hapi from 'hapi';
+import Hapi from '@hapi/hapi';
 import path from 'path';
-import Nes from 'nes';
+import Nes from '@hapi/nes';
 
-import HapiNuxt from 'hapi-nuxt';
+import HapiNuxt from '@nuxtjs/hapi';
 
 // Plugins
 // Engines
