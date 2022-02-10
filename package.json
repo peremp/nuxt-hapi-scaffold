@@ -46,7 +46,7 @@
     "isomorphic-unfetch": "^3.0.0",
     "memoizejs": "^0.1.1",
     "node-dev": "^4.0.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "nodemon": "^1.19.2",
     "nuxt": "^2.9.2",
     "sass-loader": "^8.0.0",
